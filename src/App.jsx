@@ -1,5 +1,5 @@
 // App2/src/App.jsx
-import { Routes, Route, Link, MemoryRouter } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 function Products() {
   return (
@@ -47,10 +47,9 @@ function Reports() {
   );
 }
 
-function AppContent() {
+function App() {
   return (
     <div className="bg-white rounded-lg shadow">
-      {/* Navigation */}
       <nav className="border-b border-gray-200">
         <div className="px-4 py-3">
           <div className="flex space-x-4">
@@ -76,7 +75,6 @@ function AppContent() {
         </div>
       </nav>
 
-      {/* Content */}
       <div className="p-4">
         <Routes>
           <Route path="" element={<Products />} />
@@ -85,15 +83,6 @@ function AppContent() {
         </Routes>
       </div>
     </div>
-  );
-}
-
-// Wrapper component with MemoryRouter
-function App() {
-  return (
-    <MemoryRouter>
-      <AppContent />
-    </MemoryRouter>
   );
 }
 

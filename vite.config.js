@@ -34,7 +34,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
 
-// Get the repository name from package.json or environment variable
 const BASE_URL = "/app2/";
 
 export default defineConfig({
@@ -46,7 +45,7 @@ export default defineConfig({
       exposes: {
         "./App": "./src/App",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-router-dom"],
     }),
   ],
   base: BASE_URL,
