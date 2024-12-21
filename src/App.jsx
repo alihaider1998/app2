@@ -1,5 +1,5 @@
 // App2/src/App.jsx
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 
 function Products() {
   return (
@@ -53,24 +53,36 @@ function App() {
       <nav className="border-b border-gray-200">
         <div className="px-4 py-3">
           <div className="flex space-x-4">
-            <Link
-              to=""
-              className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100"
+            <NavLink
+              to="/app2"
+              className={({ isActive }) =>
+                `px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 ${
+                  isActive ? "bg-gray-100" : ""
+                }`
+              }
             >
               Products
-            </Link>
-            <Link
-              to="analytics"
-              className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100"
+            </NavLink>
+            <NavLink
+              to="/app2/analytics"
+              className={({ isActive }) =>
+                `px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 ${
+                  isActive ? "bg-gray-100" : ""
+                }`
+              }
             >
               Analytics
-            </Link>
-            <Link
-              to="reports"
-              className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100"
+            </NavLink>
+            <NavLink
+              to="/app2/reports"
+              className={({ isActive }) =>
+                `px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 ${
+                  isActive ? "bg-gray-100" : ""
+                }`
+              }
             >
               Reports
-            </Link>
+            </NavLink>
           </div>
         </div>
       </nav>
