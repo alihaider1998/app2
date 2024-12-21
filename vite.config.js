@@ -45,6 +45,9 @@ export default defineConfig({
       exposes: {
         "./App": "./src/App",
       },
+      remotes: {
+        host: "https://alihaider1998.github.io/main-app/assets/remoteEntry.js",
+      },
       shared: ["react", "react-dom", "react-router-dom"],
     }),
   ],

@@ -1,5 +1,8 @@
 // App2/src/App.jsx
 import { Routes, Route, NavLink } from "react-router-dom";
+import { lazy } from "react";
+
+const NotFound = lazy(() => import("host/NotFound"));
 
 function Products() {
   return (
@@ -95,6 +98,8 @@ function App() {
           <Route path="" element={<Products />} />
           <Route path="analytics" element={<Analytics />} />
           <Route path="reports" element={<Reports />} />
+          {/* Redirect invalid app1 routes to main app's 404 */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </div>
