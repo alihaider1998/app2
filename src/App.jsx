@@ -77,7 +77,7 @@ function App() {
       </nav>
 
       {/* Content */}
-      <div className="p-4">
+      <div className="p-4 ">
         <Routes>
           <Route path="" element={<Products />} />
           <Route path="analytics" element={<Analytics />} />
