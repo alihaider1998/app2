@@ -2,7 +2,7 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import { lazy } from "react";
 
-const NotFound = lazy(() => import("host/NotFound"));
+const NotFound = lazy(() => import("main-app/NotFound"));
 
 function Products() {
   return (
